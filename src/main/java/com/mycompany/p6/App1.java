@@ -26,7 +26,7 @@ public class App1 {
     String home() {
         return "First HELLO!";
     }
-/*
+
     @RequestMapping("/hello")
     public String helloFunction() {
         return "HELLO!";
@@ -36,7 +36,7 @@ public class App1 {
     public String helloFunction2(String firstname) {
         return "HELLO! My name is " + firstname + ".";
     }
-*/
+
     public static void main(String[] args) {
         //System.getProperties().put("server.port",4201);
         SpringApplication.run(App1.class, args);
