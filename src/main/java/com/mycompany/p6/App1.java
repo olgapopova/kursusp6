@@ -48,12 +48,8 @@ public class App1 {
     @RequestMapping("/hello4")
     public String hello4Function(String max) {
 
-        SecureRandom random = new SecureRandom();
-        //byte bytes[] = new byte[128];
-       // random.nextBytes(bytes);
-        int number=1+random.nextInt(Integer.parseInt(max));
-       // Encoder encoder = Base64.getUrlEncoder().withoutPadding();
-        //String token = encoder.encodeToString(number);
+        SecureRandom random = new SecureRandom();       
+        int number=1+random.nextInt(Integer.parseInt(max));     
         String token = String.valueOf(number);
         return(token);
 
