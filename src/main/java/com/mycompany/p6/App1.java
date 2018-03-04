@@ -7,23 +7,26 @@ package com.mycompany.p6;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
+//import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author popova
  */
-@RestController
+@Controller
 @SpringBootApplication
 
 public class App1 {
 
     @RequestMapping("/")
-    public String helloFunction0() {
+    @ResponseBody
+    String home() {
         return "First HELLO!";
     }
-
+/*
     @RequestMapping("/hello")
     public String helloFunction() {
         return "HELLO!";
@@ -33,7 +36,7 @@ public class App1 {
     public String helloFunction2(String firstname) {
         return "HELLO! My name is " + firstname + ".";
     }
-
+*/
     public static void main(String[] args) {
         //System.getProperties().put("server.port",4201);
         SpringApplication.run(App1.class, args);
