@@ -19,6 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class App1 {
 
+    @RequestMapping("/")
+    public String helloFunction0() {
+        return "First HELLO!";
+    }
+
     @RequestMapping("/hello")
     public String helloFunction() {
         return "HELLO!";
