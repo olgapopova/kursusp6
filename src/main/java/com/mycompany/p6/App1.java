@@ -5,6 +5,9 @@
  */
 package com.mycompany.p6;
 
+import java.security.SecureRandom;
+import java.util.Base64;
+import java.util.Base64.Encoder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
@@ -40,5 +43,19 @@ public class App1 {
     public static void main(String[] args) {
         //System.getProperties().put("server.port",4201);
         SpringApplication.run(App1.class, args);
+    }
+
+    @RequestMapping("/hello4")
+    public String hello4Function(String max) {
+
+        SecureRandom random = new SecureRandom();
+        //byte bytes[] = new byte[128];
+       // random.nextBytes(bytes);
+        int number=1+random.nextInt(Integer.parseInt(max));
+       // Encoder encoder = Base64.getUrlEncoder().withoutPadding();
+        //String token = encoder.encodeToString(number);
+        String token = String.valueOf(number);
+        return(token);
+
     }
 }
